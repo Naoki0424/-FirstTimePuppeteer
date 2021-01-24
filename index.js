@@ -59,8 +59,9 @@ const CREDIT = require('./vivid-carrier-302414-167d76f38d29.json');
         var outputCsvList = [];
         outputCsvList.push(getCsvHeadder())
 
-        for (let i = 1; i <= 3; i++) {
-        // for (let i = 1; i <= comicList.length - 20; i++) {
+        // テスト時は３件でやる
+        // for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= comicList.length; i++) {
             // 無料で読める漫画のページに遷移する
             await toNextPage(page, '//*[@id="home"]/section[2]/div/div/section[3]/ul/li[' + i + ']/div[2]/div/p[1]/a');
             // 情報をCSV形式で詰める
